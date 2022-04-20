@@ -29,3 +29,5 @@ if (BUILD_TESTS)
     target_link_libraries(tests ${PROJECT_NAME} gtest_main gmock_main)
     add_test(NAME unit_test COMMAND tests)
 endif ()
+
+include(CPackConfig.cmake)
