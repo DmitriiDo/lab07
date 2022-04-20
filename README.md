@@ -1,5 +1,5 @@
 ## Laboratory work V
-
+[![Build Status](https://travis-ci.com/DmitriiDo/lab05.svg?branch=master)](https://travis-ci.com/DmitriiDo/lab05)
 Данная лабораторная работа посвещена изучению фреймворков для тестирования на примере **GTest**
 
 ```sh
