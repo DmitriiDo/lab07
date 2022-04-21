@@ -89,10 +89,18 @@ EOF
   make
   ./tests
 ```
-
+Building and creating archive
 ```sh
-$ _build/check
-$ cmake --build _build --target test -- ARGS=--verbose
+$ cmake -H. -B_build
+$ cmake --build _build
+$ cd _build
+$ cpack -G "TGZ"
+$ cd ..
+$ cmake -H. -B_build -DCPACK_GENERATOR="TGZ"
+$ cmake --build _build --target package
+$ mkdir artifacts
+$ mv _build/*.tar.gz artifacts
+$ tree artifacts
 ```
 
 ```sh
