@@ -1,23 +1,102 @@
-language: cpp
+name: CI 
+ 
+on: 
+ 
+ push: 
+ tags: 
+ - 'v*' 
+ 
+jobs: 
+ 
+ build1: 
+ 
+ runs-on: ubuntu-latest 
+ 
+ steps: 
+ 
+ - uses: actions/checkout@v3 
+ 
+ 
+ - name: set 
+ run: sudo apt install cmake rpm g++ 
+ 
+ - name: build-linux 
+  run: | 
+    mkdir build 
+    cd build 
+    cmake .. 
+    cmake —build . 
+    cpack -G DEB 
+    cpack -G RPM 
+    cpack -G TGZ 
 
-script:
-- cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install -DBUILD_TESTS=ON
-- cmake --build _build
-- cmake --build _build --target install
+ - name: Create Release 
+  id: create_release 
+  uses: actions/create-release@latest 
+  env: 
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+  with: 
+    tag_name: ${{ github.ref }} 
+    release_name: Release ${{ github.ref }} 
+    draft: false 
+    prerelease: false 
+ - name: Upload-Release-Asset 
+  id: upload-release-asset1-rpm 
+  uses: actions/upload-release-asset@v1 
+  env: 
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+  with: 
+    upload_url: ${{ steps.create_release.outputs.upload_url }} 
+    asset_path: /home/runner/work/lab6/lab6/build/solver_mega-0.1.1-Linux.rpm 
+    asset_name: solve.rpm 
+    asset_content_type: application/rpm 
 
-
-addons:
-  apt:
-    sources:
-      - george-edison55-precise-backports
-    packages:
-      - cmake
-      - cmake-data
-
-deploy:
-  provider: releases
-  api_key: "GITHUB OAUTH TOKEN"
-  file: "FILE TO UPLOAD"
-  skip_cleanup: true
-  on:
-    tags: true
+ - name: Upload-Release-Asset 
+  id: upload-release-asset1-dep 
+  uses: actions/upload-release-asset@v1 
+  env: 
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+  with: 
+    upload_url: ${{ steps.create_release.outputs.upload_url }} 
+    asset_path: /home/runner/work/lab6/lab6/build/solver_mega-0.1.1-Linux.deb 
+    asset_name: solve.deb 
+    asset_content_type: application/dep 
+ - name: Upload-Release-Asset 
+  id: upload-release-asset1-tar 
+  uses: actions/upload-release-asset@v1 
+  env: 
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+  with: 
+    upload_url: ${{ steps.create_release.outputs.upload_url }} 
+    asset_path: /home/runner/work/lab6/lab6/build/solver_mega-0.1.1-Linux.tar.gz 
+    asset_name: solve.tar.gz 
+    asset_content_type: application/tar 
+ 
+ build2: 
+ 
+ runs-on: windows-latest 
+ steps: 
+  - uses: actions/checkout@v3 
+ 
+- name: build-win 
+ run: | 
+  mkdir build 
+  cd build 
+  cmake .. 
+  cmake —build . 
+  cmake —build . —config Release 
+  cpack -C Release 
+  cpack -G NSIS64 
+ 
+ build3: 
+ 
+ runs-on: macos-latest 
+ steps: 
+  - uses: actions/checkout@v3 
+  - name: build-mac 
+ run: | 
+  mkdir build 
+  cd build 
+  cmake .. 
+  cmake —build . 
+  cpack -G DragNDrop
