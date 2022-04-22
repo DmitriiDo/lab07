@@ -40,6 +40,7 @@ jobs:
     release_name: Release ${{ github.ref }} 
     draft: false 
     prerelease: false 
+    
  - name: Upload-Release-Asset 
   id: upload-release-asset1-rpm 
   uses: actions/upload-release-asset@v1 
@@ -47,8 +48,8 @@ jobs:
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
   with: 
     upload_url: ${{ steps.create_release.outputs.upload_url }} 
-    asset_path: /home/runner/work/lab6/lab6/build/solver_mega-0.1.1-Linux.rpm 
-    asset_name: solve.rpm 
+    asset_path: /home/runner/work/lab6/lab6/_build/banking-0.1.0.0-Linux.rpm 
+    asset_name: banking.rpm 
     asset_content_type: application/rpm 
 
  - name: Upload-Release-Asset 
@@ -58,8 +59,8 @@ jobs:
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
   with: 
     upload_url: ${{ steps.create_release.outputs.upload_url }} 
-    asset_path: /home/runner/work/lab6/lab6/build/solver_mega-0.1.1-Linux.deb 
-    asset_name: solve.deb 
+    asset_path: /home/runner/work/lab6/lab6/_build/banking-0.1.0.0-Linux.deb 
+    asset_name: banking.deb 
     asset_content_type: application/dep 
  - name: Upload-Release-Asset 
   id: upload-release-asset1-tar 
@@ -68,8 +69,8 @@ jobs:
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
   with: 
     upload_url: ${{ steps.create_release.outputs.upload_url }} 
-    asset_path: /home/runner/work/lab6/lab6/build/solver_mega-0.1.1-Linux.tar.gz 
-    asset_name: solve.tar.gz 
+    asset_path: /home/runner/work/lab6/lab6/_build/banking-0.1.0.0-Linux.tar.gz 
+    asset_name: banking.tar.gz 
     asset_content_type: application/tar 
  
  build2: 
