@@ -53,8 +53,8 @@ jobs:
 #         run: echo "::set-output name=version::$(./bin/azblogfilter --version)"
         run: echo "v0.1.0.0"
         id: version
-      - name: release
-        uses: actions/release-action@v1
+      - name: Create Release
+        uses: ncipollo/release-action@v1.10.0
         id: create_release
         with:
           draft: false
