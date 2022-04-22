@@ -69,6 +69,7 @@ jobs:
       - name: building_artifacts
         shell: bash
         run: |
+          ls
           sudo apt-get install -y cmake
           sudo apt-get install -y rpm
           cmake -H. -B_build
