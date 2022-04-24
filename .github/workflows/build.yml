@@ -1,20 +1,6 @@
 name: building_tests
 on: [ push ]
 jobs:
-  building_gtests:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: checkout
-        uses: actions/checkout@v1
-
-      - name: build
-        shell: bash
-        run: |
-          git submodule update --init --recursive
-          cmake -B build
-          cd build
-          make
   testing:
     runs-on: ubuntu-latest
 
@@ -25,20 +11,18 @@ jobs:
       - name: tests
         shell: bash
         run: |
-          git submodule update --init --recursive
-          cmake -B build
-          cd build
-          make
-          ./tests
+          cmake -H. -B_builds -DBUILD_TESTS=ON
+          cmake --build _builds
+          cmake --build _builds --target test
           
       - name: install lcov
         run: |
           sudo apt-get install -y lcov
       - name: run lcov
         run: | 
-          lcov --capture --directory build/CMakeFiles/banking.dir/banking --output-file lcov.info
+          lcov --capture --directory _builds/CMakeFiles/demo.dir/demo --output-file lcov.info
           lcov --remove lcov.info '/usr/include/*' -o lcov.info
-          lcov --remove lcov.info '/home/runner/work/lab05/lab05/third-party/gtest/*' -o lcov.info
+          # lcov --remove lcov.info '/home/runner/work/lab07/lab07/third-party/gtest/*' -o lcov.info
       - name: coveralls
         uses: coverallsapp/github-action@master
         with:
@@ -88,7 +72,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./_build/banking-0.1.0.0-Linux.deb
+          asset_path: ./_build/v0.1.0.0-Linux.deb
           asset_name: banking.deb
           asset_content_type: application/apt
       
@@ -98,8 +82,8 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./_build/banking-0.1.0.0-Linux.tar.gz
-          asset_name: azblogfilter.linux-amd64.tar.gz
+          asset_path: ./_build/v0.1.0.0-Linux.tar.gz
+          asset_name: v0.1.0.0.tar.gz
           asset_content_type: application/gzip
       
       
@@ -109,8 +93,8 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./_build/banking-0.1.0.0-Linux.sh
-          asset_name: banking.sh
+          asset_path: ./_build/v0.1.0.0-Linux.sh
+          asset_name: v0.1.0.0.sh
           asset_content_type: application/shell
       
       
@@ -120,8 +104,8 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./_build/banking-0.1.0.0-Linux.rpm
-          asset_name: banking.rpm
+          asset_path: ./_build/v0.1.0.0-Linux.rpm
+          asset_name: v0.1.0.0.rpm
           asset_content_type: application/rpm
           
       - name: upload tarZ artifact
@@ -130,7 +114,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./_build/banking-0.1.0.0-Linux.tar.Z
-          asset_name: banking.tar.Z
+          asset_path: ./_build/v0.1.0.0-Linux.tar.Z
+          asset_name: v0.1.0.0.tar.Z
           asset_content_type: application/gzip
     
