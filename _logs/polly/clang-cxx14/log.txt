@@ -1,0 +1,346 @@
+Execute command: [
+  `which`
+  `cmake`
+]
+[/mnt/c/Users/Yaric-PC/Documents/Git Projects/lab07]> "which" "cmake"
+/usr/bin/cmake
+Execute command: [
+  `cmake`
+  `--version`
+]
+[/mnt/c/Users/Yaric-PC/Documents/Git Projects/lab07]> "cmake" "--version"
+cmake version 3.18.4
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+Execute command: [
+  `cmake`
+  `-H.`
+  `-B/mnt/c/Users/Yaric-PC/Documents/Git Projects/lab07/_builds/clang-cxx14`
+  `-GUnix Makefiles`
+  `-DCMAKE_TOOLCHAIN_FILE=/mnt/c/Users/Yaric-PC/Documents/Git Projects/lab07/tools/polly/clang-cxx14.cmake`
+]
+[/mnt/c/Users/Yaric-PC/Documents/Git Projects/lab07]> "cmake" "-H." "-B/mnt/c/Users/Yaric-PC/Documents/Git Projects/lab07/_builds/clang-cxx14" "-GUnix Makefiles" "-DCMAKE_TOOLCHAIN_FILE=/mnt/c/Users/Yaric-PC/Documents/Git Projects/lab07/tools/polly/clang-cxx14.cmake"
+-- [polly] Used toolchain: clang / c++14 support
+-- The C compiler identification is Clang 11.0.1
+-- The CXX compiler identification is Clang 11.0.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- [hunter] Calculating Toolchain-SHA1
+-- [hunter] Calculating Config-SHA1
+-- [hunter] HUNTER_ROOT: /home/gekata/projects/hunter
+-- [hunter] [ Hunter-ID: xxxxxxx | Toolchain-ID: a18f2d2 | Config-ID: 5a6fbd5 ]
+-- [hunter] GTEST_ROOT: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Install (ver.: 1.11.0)
+-- [hunter] Building GTest
+loading initial cache file /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/cache.cmake
+loading initial cache file /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/args.cmake
+-- [polly] Used toolchain: clang / c++14 support
+-- The C compiler identification is Clang 11.0.1
+-- The CXX compiler identification is Clang 11.0.1
+-- Check for working C compiler: /usr/bin/clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Build
+Scanning dependencies of target GTest-Release
+[  6%] Creating directories for 'GTest-Release'
+[ 12%] Performing download step (download, verify and extract) for 'GTest-Release'
+-- verifying file...
+       file='/home/gekata/projects/hunter/_Base/Download/GTest/1.11.0/7b100bb/release-1.11.0.tar.gz'
+-- File already exists and hash match (skip download):
+  file='/home/gekata/projects/hunter/_Base/Download/GTest/1.11.0/7b100bb/release-1.11.0.tar.gz'
+  SHA1='7b100bb68db8df1060e178c495f3cbe941c9b058'
+-- extracting...
+     src='/home/gekata/projects/hunter/_Base/Download/GTest/1.11.0/7b100bb/release-1.11.0.tar.gz'
+     dst='/home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Source'
+-- extracting... [tar xfz]
+-- extracting... [analysis]
+-- extracting... [rename]
+-- extracting... [clean up]
+-- extracting... done
+[ 18%] No update step for 'GTest-Release'
+[ 25%] No patch step for 'GTest-Release'
+[ 31%] Performing configure step for 'GTest-Release'
+loading initial cache file /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/cache.cmake
+loading initial cache file /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/args.cmake
+-- [polly] Used toolchain: clang / c++14 support
+-- The C compiler identification is Clang 11.0.1
+-- The CXX compiler identification is Clang 11.0.1
+-- Check for working C compiler: /usr/bin/clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Python: /usr/bin/python3.9 (found version "3.9.2") found components: Interpreter
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Build/GTest-Release-prefix/src/GTest-Release-build
+[ 37%] Performing build step for 'GTest-Release'
+Scanning dependencies of target gtest
+[ 12%] Building CXX object googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[ 25%] Linking CXX static library ../lib/libgtest.a
+[ 25%] Built target gtest
+Scanning dependencies of target gtest_main
+Scanning dependencies of target gmock
+[ 37%] Building CXX object googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[ 50%] Building CXX object googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+[ 62%] Linking CXX static library ../lib/libgtest_main.a
+[ 62%] Built target gtest_main
+[ 75%] Linking CXX static library ../lib/libgmock.a
+[ 75%] Built target gmock
+Scanning dependencies of target gmock_main
+[ 87%] Building CXX object googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+[100%] Linking CXX static library ../lib/libgmock_main.a
+[100%] Built target gmock_main
+[ 43%] Performing install step for 'GTest-Release'
+[ 25%] Built target gtest
+[ 50%] Built target gmock
+[ 75%] Built target gmock_main
+[100%] Built target gtest_main
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/gmock-matchers.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/gmock-function-mocker.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/internal
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/internal/gmock-pp.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/internal/gmock-internal-utils.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/internal/gmock-port.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/internal/custom
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/internal/custom/gmock-port.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/internal/custom/gmock-matchers.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/internal/custom/gmock-generated-actions.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/internal/custom/README.md
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/gmock-more-actions.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/gmock-more-matchers.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/gmock-nice-strict.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/gmock.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/gmock-cardinalities.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/gmock-spec-builders.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/gmock-actions.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/lib/libgmock.a
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/lib/libgmock_main.a
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/lib/pkgconfig/gmock.pc
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/lib/pkgconfig/gmock_main.pc
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/lib/cmake/GTest/GTestTargets.cmake
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/lib/cmake/GTest/GTestTargets-release.cmake
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/lib/cmake/GTest/GTestConfigVersion.cmake
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/lib/cmake/GTest/GTestConfig.cmake
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/gtest-param-test.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/gtest-port-arch.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/gtest-string.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/gtest-death-test-internal.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/gtest-type-util.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/gtest-port.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/gtest-internal.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/gtest-param-util.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/gtest-filepath.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/custom
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/custom/README.md
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/custom/gtest.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/custom/gtest-port.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/custom/gtest-printers.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/gtest-matchers.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/gtest-death-test.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/gtest-spi.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/gtest.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/gtest-test-part.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/gtest-typed-test.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/gtest_prod.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/gtest_pred_impl.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/gtest-message.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/gtest-printers.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/lib/libgtest.a
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/lib/libgtest_main.a
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/lib/pkgconfig/gtest.pc
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/lib/pkgconfig/gtest_main.pc
+loading initial cache file /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/args.cmake
+[ 50%] Completed 'GTest-Release'
+[ 50%] Built target GTest-Release
+Scanning dependencies of target GTest-Debug
+[ 56%] Creating directories for 'GTest-Debug'
+[ 62%] Performing download step (download, verify and extract) for 'GTest-Debug'
+-- verifying file...
+       file='/home/gekata/projects/hunter/_Base/Download/GTest/1.11.0/7b100bb/release-1.11.0.tar.gz'
+-- File already exists and hash match (skip download):
+  file='/home/gekata/projects/hunter/_Base/Download/GTest/1.11.0/7b100bb/release-1.11.0.tar.gz'
+  SHA1='7b100bb68db8df1060e178c495f3cbe941c9b058'
+-- extracting...
+     src='/home/gekata/projects/hunter/_Base/Download/GTest/1.11.0/7b100bb/release-1.11.0.tar.gz'
+     dst='/home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Source'
+-- extracting... [tar xfz]
+-- extracting... [analysis]
+-- extracting... [rename]
+-- extracting... [clean up]
+-- extracting... done
+[ 68%] No update step for 'GTest-Debug'
+[ 75%] No patch step for 'GTest-Debug'
+[ 81%] Performing configure step for 'GTest-Debug'
+loading initial cache file /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/cache.cmake
+loading initial cache file /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/args.cmake
+-- [polly] Used toolchain: clang / c++14 support
+-- The C compiler identification is Clang 11.0.1
+-- The CXX compiler identification is Clang 11.0.1
+-- Check for working C compiler: /usr/bin/clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Python: /usr/bin/python3.9 (found version "3.9.2") found components: Interpreter
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Build/GTest-Debug-prefix/src/GTest-Debug-build
+[ 87%] Performing build step for 'GTest-Debug'
+Scanning dependencies of target gtest
+[ 12%] Building CXX object googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[ 25%] Linking CXX static library ../lib/libgtestd.a
+[ 25%] Built target gtest
+Scanning dependencies of target gtest_main
+Scanning dependencies of target gmock
+[ 37%] Building CXX object googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[ 50%] Building CXX object googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+[ 62%] Linking CXX static library ../lib/libgtest_maind.a
+[ 62%] Built target gtest_main
+[ 75%] Linking CXX static library ../lib/libgmockd.a
+[ 75%] Built target gmock
+Scanning dependencies of target gmock_main
+[ 87%] Building CXX object googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+[100%] Linking CXX static library ../lib/libgmock_maind.a
+[100%] Built target gmock_main
+[ 93%] Performing install step for 'GTest-Debug'
+[ 25%] Built target gtest
+[ 50%] Built target gmock
+[ 75%] Built target gmock_main
+[100%] Built target gtest_main
+Install the project...
+-- Install configuration: "Debug"
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/gmock-matchers.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/gmock-function-mocker.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/internal
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/internal/gmock-pp.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/internal/gmock-internal-utils.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/internal/gmock-port.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/internal/custom
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/internal/custom/gmock-port.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/internal/custom/gmock-matchers.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/internal/custom/gmock-generated-actions.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/internal/custom/README.md
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/gmock-more-actions.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/gmock-more-matchers.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/gmock-nice-strict.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/gmock.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/gmock-cardinalities.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/gmock-spec-builders.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gmock/gmock-actions.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/lib/libgmockd.a
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/lib/libgmock_maind.a
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/lib/pkgconfig/gmock.pc
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/lib/pkgconfig/gmock_main.pc
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/lib/cmake/GTest/GTestTargets.cmake
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/lib/cmake/GTest/GTestTargets-debug.cmake
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/lib/cmake/GTest/GTestConfigVersion.cmake
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/lib/cmake/GTest/GTestConfig.cmake
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/gtest-param-test.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/gtest-port-arch.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/gtest-string.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/gtest-death-test-internal.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/gtest-type-util.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/gtest-port.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/gtest-internal.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/gtest-param-util.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/gtest-filepath.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/custom
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/custom/README.md
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/custom/gtest.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/custom/gtest-port.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/internal/custom/gtest-printers.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/gtest-matchers.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/gtest-death-test.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/gtest-spi.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/gtest.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/gtest-test-part.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/gtest-typed-test.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/gtest_prod.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/gtest_pred_impl.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/gtest-message.h
+-- Up-to-date: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/include/gtest/gtest-printers.h
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/lib/libgtestd.a
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/lib/libgtest_maind.a
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/lib/pkgconfig/gtest.pc
+-- Installing: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/Install/lib/pkgconfig/gtest_main.pc
+loading initial cache file /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest/args.cmake
+[100%] Completed 'GTest-Debug'
+[100%] Built target GTest-Debug
+-- [hunter] Build step successful (dir: /home/gekata/projects/hunter/_Base/xxxxxxx/a18f2d2/5a6fbd5/Build/GTest)
+-- [hunter] Cache saved: /home/gekata/projects/hunter/_Base/Cache/raw/341061fc1ce07de03ee9ea8991cef7c7470edb6b.tar.bz2
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/c/Users/Yaric-PC/Documents/Git Projects/lab07/_builds/clang-cxx14
+Execute command: [
+  `cmake`
+  `--build`
+  `/mnt/c/Users/Yaric-PC/Documents/Git Projects/lab07/_builds/clang-cxx14`
+  `--`
+]
+[/mnt/c/Users/Yaric-PC/Documents/Git Projects/lab07]> "cmake" "--build" "/mnt/c/Users/Yaric-PC/Documents/Git Projects/lab07/_builds/clang-cxx14" "--"
+Scanning dependencies of target print
+gmake[2]: Warning: File 'CMakeFiles/print.dir/depend.make' has modification time 0.3 s in the future
+[ 25%] Building CXX object CMakeFiles/print.dir/sources/print.cpp.o
+[ 50%] Linking CXX static library libprint.a
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 50%] Built target print
+Scanning dependencies of target demo
+gmake[2]: Warning: File 'CMakeFiles/demo.dir/depend.make' has modification time 0.3 s in the future
+[ 75%] Building CXX object CMakeFiles/demo.dir/demo/main.cpp.o
+[100%] Linking CXX executable demo
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[100%] Built target demo

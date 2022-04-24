@@ -1,0 +1,81 @@
+Execute command: [
+  `which`
+  `cmake`
+]
+[/mnt/c/Users/Yaric-PC/Documents/Git Projects/lab07]> "which" "cmake"
+/usr/bin/cmake
+Execute command: [
+  `cmake`
+  `--version`
+]
+[/mnt/c/Users/Yaric-PC/Documents/Git Projects/lab07]> "cmake" "--version"
+cmake version 3.18.4
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+Execute command: [
+  `cmake`
+  `-H.`
+  `-B/mnt/c/Users/Yaric-PC/Documents/Git Projects/lab07/_builds/default`
+  `-DCMAKE_TOOLCHAIN_FILE=/mnt/c/Users/Yaric-PC/Documents/Git Projects/lab07/tools/polly/default.cmake`
+]
+[/mnt/c/Users/Yaric-PC/Documents/Git Projects/lab07]> "cmake" "-H." "-B/mnt/c/Users/Yaric-PC/Documents/Git Projects/lab07/_builds/default" "-DCMAKE_TOOLCHAIN_FILE=/mnt/c/Users/Yaric-PC/Documents/Git Projects/lab07/tools/polly/default.cmake"
+-- [polly] Used toolchain: Default
+-- The C compiler identification is GNU 10.2.1
+-- The CXX compiler identification is GNU 10.2.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- [hunter] Calculating Toolchain-SHA1
+-- [hunter] Calculating Config-SHA1
+-- [hunter] HUNTER_ROOT: /home/gekata/projects/hunter
+-- [hunter] [ Hunter-ID: xxxxxxx | Toolchain-ID: 7eb24f9 | Config-ID: 5a6fbd5 ]
+-- [hunter] GTEST_ROOT: /home/gekata/projects/hunter/_Base/xxxxxxx/7eb24f9/5a6fbd5/Install (ver.: 1.11.0)
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/c/Users/Yaric-PC/Documents/Git Projects/lab07/_builds/default
+Execute command: [
+  `cmake`
+  `--build`
+  `/mnt/c/Users/Yaric-PC/Documents/Git Projects/lab07/_builds/default`
+  `--`
+]
+[/mnt/c/Users/Yaric-PC/Documents/Git Projects/lab07]> "cmake" "--build" "/mnt/c/Users/Yaric-PC/Documents/Git Projects/lab07/_builds/default" "--"
+Scanning dependencies of target print
+gmake[2]: Warning: File 'CMakeFiles/print.dir/depend.make' has modification time 0.3 s in the future
+[ 25%] Building CXX object CMakeFiles/print.dir/sources/print.cpp.o
+[ 50%] Linking CXX static library libprint.a
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 50%] Built target print
+Scanning dependencies of target demo
+gmake[2]: Warning: File 'CMakeFiles/demo.dir/depend.make' has modification time 0.3 s in the future
+[ 75%] Building CXX object CMakeFiles/demo.dir/demo/main.cpp.o
+[100%] Linking CXX executable demo
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+[100%] Built target demo
+Execute command: [
+  `ctest`
+]
+[/mnt/c/Users/Yaric-PC/Documents/Git Projects/lab07/_builds/default]> "ctest"
+*********************************
+No test configuration file found!
+*********************************
+Usage
+
+  ctest [options]
+
