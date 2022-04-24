@@ -73,7 +73,7 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./_builds/print-0.1.0.0-Linux.deb
-          asset_name: banking.deb
+          asset_name: v0.1.0.0.deb
           asset_content_type: application/apt
       
       - name: upload tar artifact
