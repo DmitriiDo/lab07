@@ -63,8 +63,8 @@ jobs:
         run: |
           sudo apt-get install -y cmake
           sudo apt-get install -y rpm
-          cmake -H. -B_build
-          cmake --build _build --target package
+          cmake -H. -B_builds -DBUILD_TESTS=ON
+          cmake --build _builds --target package
       
       - name: upload deb artifact
         uses: actions/upload-release-asset@v1
